@@ -9,7 +9,55 @@ title: CAL-JLC
 	<p>Current: CAL-JLC, version: V0.8 (beta evaulation)</p>
 	
 	<p>Provides 2-way fader control and cut/on button switching between audio mixers supporting the CSCP protocol and JL-Cooper control panels over Ethernet.</p>
-feedback: contact.caljlc@gmail.com
+
+	<p>Tested with Calrec Brio & Impulse, and JL-Cooper Eclipse MXL2.</p>
+
+	<p>
+		The default configuration for the JL-Cooper panel is address 192.168.200.114 on port 49300.
+		JL-Cooper configuration can be changed by accessing its setup UI using a web-browser on its address.
+		To set the JL-Cooper panel back to its default configuration, press and hold the 3 white buttons in fader strip 8 while powering up the unit.
+		... The unit will indicate when it has reset and prompt to repower for the changes to be applied.
+
+	</p>
+	
+	<p>
+		This version provides 2-way control of faders and cut/on buttons, along with fader labels.
+		Note, writing data to the LCDs on the JLC panel is slow, so this version currently only updates labels when the application starts up.
+	</p>
+	
+	<p>
+		Usage:
+
+		Unzip the CAL-JLC_08.zip file to a location of your choice, keeping all of the file contents together.
+
+		Double-click the CAL-JLC_08.exe file to launch the application. 
+	</p>
+
+	<p>
+		On first usage, you will be prompted for connection details. 
+
+		If the JLC panel is using its default settings, its address is 192.168.200.114, and port 49300.
+
+		Check your mixer UI to setup/view its CSCP address and port, ensuring CSCP is enabled.
+
+		Enter "y" at the prompt for two-way fader control, o "n" for one-way JLC->CAL
+
+		Choose any faders from 1 to 192 on the mixer to map to the 8 faders on the JLC panel.
+
+		Note, mixer CSCP faders "wrap" so you can control different layers / do not have to control the visible/top layer, 
+
+		... e.g. on a mixer with 32 physical faders, CSCP fader 33 = Layer 1 B fader 1, CSCP fader 65 = Layer 2 A fader 1 etc.).
+
+
+		Ensure the machine this appication is running on has IP address/es that are reachable by the addresses set on both the mixer and the JLC.
+
+	</p>
+	
+	<br/>	
+	
+	<p>
+		Feedback and support: <a href="mailto:contact.caljlc@gmail.com">contact.caljlc@gmail.com</a>
+	</p>
 	
 	<br/>
 	
@@ -33,7 +81,7 @@ feedback: contact.caljlc@gmail.com
 	
 	<!--<a href="/usage.html">Further info & instructions for using CAL-JLC</a>-->
 	
-	<p>Feedback and support: <a href="mailto:contact.caljlc@gmail.com">contact.caljlc@gmail.com</a></p>
+	
 	
 </div><!-- /.blurb -->
 
@@ -47,40 +95,3 @@ feedback: contact.caljlc@gmail.com
 
 
 
-Tested with Calrec Brio & Impulse, and JL-Cooper Eclipse MXL2.
-
-The default configuration for the JL-Cooper panel is address 192.168.200.114 on port 49300.
-JL-Cooper configuration can be changed by accessing its setup UI using a web-browser on its address.
-To set the JL-Cooper panel back to its default configuration, press and hold the 3 white buttons in fader strip 8 while powering up the unit.
-... The unit will indicate when it has reset and prompt to repower for the changes to be applied.
-
-
-This version provides 2-way control of faders and cut/on buttons, along with fader labels.
-Note, writing data to the LCDs on the JLC panel is slow, so this version currently only updates labels when the application starts up.
-
-
-Usage:
-
-Unzip the CAL-JLC_08.zip file to a location of your choice, keeping all of the file contents together.
-
-Double-click the CAL-JLC_08.exe file to launch the application. 
-
-On first usage, you will be prompted for connection details. 
-
-If the JLC panel is using its default settings, its address is 192.168.200.114, and port 49300.
-
-Check your mixer UI to setup/view its CSCP address and port, ensuring CSCP is enabled.
-
-Enter "y" at the prompt for two-way fader control, o "n" for one-way JLC->CAL
-
-Choose any faders from 1 to 192 on the mixer to map to the 8 faders on the JLC panel.
-
-Note, mixer CSCP faders "wrap" so you can control different layers / do not have to control the visible/top layer, 
-
-... e.g. on a mixer with 32 physical faders, CSCP fader 33 = Layer 1 B fader 1, CSCP fader 65 = Layer 2 A fader 1 etc.).
-
-
-Ensure the machine this appication is running on has IP address/es that are reachable by the addresses set on both the mixer and the JLC.
-
-
-feedback: contact.caljlc@gmail.com
